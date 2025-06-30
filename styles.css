@@ -1,18 +1,18 @@
-/* General Body Styles */
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
     color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Header Styles */
+/* Encabezado */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -20,88 +20,80 @@ header h1 {
     margin: 0;
 }
 
-/* Navigation Bar Styles */
+/* Navegación */
+nav {
+    background: #e8491d;
+}
+
 nav ul {
     padding: 0;
+    margin: 0;
     list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    padding: 15px 20px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
-/* Section Styles */
-section {
+nav ul li a:hover {
+    color: #cccccc;
+}
+
+/* Contenido principal */
+main {
     padding: 20px;
-    margin: 0 20px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Specific Section - About Me */
-#about {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#about img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Specific Section - Skills */
-#skills ul {
-    list-style: none;
-    padding: 0;
+.servicios {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-}
-
-#skills ul li {
-    background: #5cb85c;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-/* Specific Section - Portfolio */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.portfolio-item {
-    background: #e9e9e9;
+article {
+    flex: 1;
+    min-width: 200px;
     padding: 15px;
-    border-radius: 8px;
-    text-align: center;
+    background: #f9f9f9;
+    border-left: 3px solid #e8491d;
 }
 
-.portfolio-item h3 {
-    margin-top: 0;
-}
-
-.portfolio-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Footer Styles */
+/* Pie de página */
 footer {
+    background: #35424a;
+    color: white;
     text-align: center;
     padding: 20px;
-    background: #333;
-    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .servicios {
+        flex-direction: column;
+    }
 }
